@@ -80,3 +80,41 @@ public class AppToDoListQua {
                     boolean ok = servico.removerTarefa(id);
                     System.out.println(ok ? "Removida." : "Tarefa não encontrada.");
                 }
+
+                case 5 -> {
+                    System.out.print("Pesquisar por título: ");
+                    String termo = entrada.nextLine();
+                    List<Tarefas> achadas = servico.pesquisarPorTitulo(termo);
+                    if (achadas.isEmpty()) {
+                        System.out.println("Nenhuma tarefa encontrada.");
+                    } else {
+                        System.out.println("Resultados:");
+                        for (Tarefas t : achadas) {
+                            System.out.println(t.getId() + " - " + t.getTitulo());
+                        }
+                    }
+                }
+
+                case 6 -> {
+                    List<Tarefas> concluidas = servico.listarConcluidas();
+                    if (concluidas.isEmpty()) {
+                        System.out.println("Nenhuma tarefa concluída.");
+                    } else {
+                        System.out.println("Tarefas concluídas:");
+                        for (Tarefas t : concluidas) {
+                            System.out.println(t.getId() + " - " + t.getTitulo());
+                        }
+                    }
+                }
+
+                case 7 -> {
+                    System.out.println("Saindo...");
+                    return;
+                }
+
+                default -> System.out.println("Opção inválida.");
+            }
+        }
+    }
+}
+
