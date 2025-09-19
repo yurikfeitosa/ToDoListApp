@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2eb997a-8e9c-4b7b-81e6-577631402aca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ToDoListApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ToDoListApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ToDoListApp/src/ucb/aplicacao/cli/AppToDoListQua.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ToDoListApp/src/ucb/aplicacao/cli/AppToDoListQua.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ucb/aplicacao/model/Tarefas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ucb/aplicacao/model/Tarefas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,23 +21,23 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../ToDoListApp" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "yurikfeitosa"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yurikfeitosa&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/yurikfeitosa/ToDoListApp.git",
-    "accountId": "81fe345a-81f7-4a6c-a5e9-e11e6af4bd2b"
+    "accountId": "8eca7e1c-4cf2-4e8e-a9dd-51c1e6eaf99a"
   }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="32vQ8pReAKFGtaDnNGsRrrZO9AB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -47,6 +47,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/yurik/IdeaProjects/ToDoListApp/src/Main.java"
