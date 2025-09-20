@@ -1,13 +1,10 @@
 package ucb.aplicacao.cli;
-
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Scanner;
-
 import ucb.aplicacao.model.Tarefas;
 import ucb.aplicacao.service.TarefaService;
-
 public class AppToDoListQua {
     public static void main(String[] args) {
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
@@ -117,4 +114,3 @@ public class AppToDoListQua {
         }
     }
 }
-
