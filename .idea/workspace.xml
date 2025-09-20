@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2eb997a-8e9c-4b7b-81e6-577631402aca" name="Changes" comment="feat: adiciona classe Tarefas&#10;&#10;- Criação da classe Tarefas com atributos id,título, descrição, completa e data de criação&#10;- Implementa construtores sobrecarregados&#10;- Inclui getters e setters para todos os atributos&#10;- Adiciona método para retornar a data formatada em pt-BR">
+    <list default="true" id="c2eb997a-8e9c-4b7b-81e6-577631402aca" name="Changes" comment="feat: implementar service de tarefas com CRUD básico&#10;&#10;- Criar nova tarefa com ID incremental&#10;- Listar todas as tarefas (retornando cópia da lista)&#10;- Atualizar título, descrição e status de conclusão&#10;- Remover tarefa por ID&#10;- Pesquisar tarefas pelo título (case-insensitive)&#10;- Listar apenas tarefas concluídas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ToDoListApp..iml" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoListApp..iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ucb/aplicacao/cli/AppToDoListQua.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ucb/aplicacao/cli/AppToDoListQua.java" afterDir="false" />
@@ -84,6 +84,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: adiciona classe Tarefas&#10;&#10;- Criação da classe Tarefas com atributos id,título, descrição, completa e data de criação&#10;- Implementa construtores sobrecarregados&#10;- Inclui getters e setters para todos os atributos&#10;- Adiciona método para retornar a data formatada em pt-BR" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: adiciona classe Tarefas&#10;&#10;- Criação da classe Tarefas com atributos id,título, descrição, completa e data de criação&#10;- Implementa construtores sobrecarregados&#10;- Inclui getters e setters para todos os atributos&#10;- Adiciona método para retornar a data formatada em pt-BR" />
+    <MESSAGE value="feat: implementar service de tarefas com CRUD básico&#10;&#10;- Criar nova tarefa com ID incremental&#10;- Listar todas as tarefas (retornando cópia da lista)&#10;- Atualizar título, descrição e status de conclusão&#10;- Remover tarefa por ID&#10;- Pesquisar tarefas pelo título (case-insensitive)&#10;- Listar apenas tarefas concluídas" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implementar service de tarefas com CRUD básico&#10;&#10;- Criar nova tarefa com ID incremental&#10;- Listar todas as tarefas (retornando cópia da lista)&#10;- Atualizar título, descrição e status de conclusão&#10;- Remover tarefa por ID&#10;- Pesquisar tarefas pelo título (case-insensitive)&#10;- Listar apenas tarefas concluídas" />
   </component>
 </project>
