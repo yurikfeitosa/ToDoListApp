@@ -1,13 +1,10 @@
 package ucb.aplicacao.cli;
-
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Scanner;
-
 import ucb.aplicacao.model.Tarefas;
 import ucb.aplicacao.service.TarefaService;
-
 public class AppToDoListQua {
     public static void main(String[] args) {
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
@@ -28,3 +25,92 @@ public class AppToDoListQua {
             System.out.print("Escolha uma opção: ");
             int opcao = entrada.nextInt();
             entrada.nextLine();
+
+            switch (opcao) {
+                case 1 -> {
+                    System.out.print("Título: ");
+                    String titulo = entrada.nextLine();
+                    System.out.print("Descrição: ");
+                    String descricao = entrada.nextLine();
+                    Tarefas nova = servico.criarTarefa(titulo, descricao);
+                    System.out.println("Criada: " + nova.getId() + " - " + nova.getTitulo());
+                }
+
+                case 2 -> {
+                    List<Tarefas> tarefas = servico.listarTarefas();
+                    if (tarefas.isEmpty()) {
+                        System.out.println("Nenhuma tarefa cadastrada.");
+                    } else {
+                        System.out.println("Lista de Tarefas:");
+                        for (Tarefas t : tarefas) {
+                            System.out.println(t.getId() + " - " + t.getTitulo() + " | " + t.getDescricao()
+                                    + (t.isCompleta() ? " [concluída]" : ""));
+                        }
+                    }
+                }
+
+                case 3 -> {
+                    System.out.print("ID da tarefa: ");
+                    long id = entrada.nextLong();
+                    entrada.nextLine();
+
+                    System.out.print("Novo título (vazio mantém): ");
+                    String novoTitulo = entrada.nextLine();
+
+                    System.out.print("Nova descrição (vazio mantém): ");
+                    String novaDesc = entrada.nextLine();
+
+                    System.out.print("Alterar status de concluída? (s = marcar, n = desmarcar, Enter = manter): ");
+                    String resp = entrada.nextLine().trim();
+                    Boolean novoCompleto = null;
+                    if (resp.equalsIgnoreCase("s")) novoCompleto = true;
+                    else if (resp.equalsIgnoreCase("n")) novoCompleto = false;
+
+                    boolean ok = servico.atualizarTarefa(id, novoTitulo, novaDesc, novoCompleto);
+                    System.out.println(ok ? "Atualizada." : "Tarefa não encontrada.");
+                }
+
+                case 4 -> {
+                    System.out.print("ID da tarefa: ");
+                    long id = entrada.nextLong();
+                    entrada.nextLine();
+                    boolean ok = servico.removerTarefa(id);
+                    System.out.println(ok ? "Removida." : "Tarefa não encontrada.");
+                }
+
+                case 5 -> {
+                    System.out.print("Pesquisar por título: ");
+                    String termo = entrada.nextLine();
+                    List<Tarefas> achadas = servico.pesquisarPorTitulo(termo);
+                    if (achadas.isEmpty()) {
+                        System.out.println("Nenhuma tarefa encontrada.");
+                    } else {
+                        System.out.println("Resultados:");
+                        for (Tarefas t : achadas) {
+                            System.out.println(t.getId() + " - " + t.getTitulo());
+                        }
+                    }
+                }
+
+                case 6 -> {
+                    List<Tarefas> concluidas = servico.listarConcluidas();
+                    if (concluidas.isEmpty()) {
+                        System.out.println("Nenhuma tarefa concluída.");
+                    } else {
+                        System.out.println("Tarefas concluídas:");
+                        for (Tarefas t : concluidas) {
+                            System.out.println(t.getId() + " - " + t.getTitulo());
+                        }
+                    }
+                }
+
+                case 7 -> {
+                    System.out.println("Saindo...");
+                    return;
+                }
+
+                default -> System.out.println("Opção inválida.");
+            }
+        }
+    }
+}
